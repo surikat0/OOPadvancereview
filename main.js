@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var punto_1 = require("./punto");
+var triangulo_1 = require("./triangulo");
 var unPunto = new punto_1.Punto(2, 2);
 var dosPunto = new punto_1.Punto(5, -2);
 var tresPunto = new punto_1.Punto(-5, 1);
@@ -15,7 +16,15 @@ console.log(unPunto.calcularCuadrante());
 console.log(dosPunto.calcularCuadrante());
 console.log(tresPunto.calcularCuadrante());
 console.log(cuartoPunto.calcularCuadrante());
+console.log("-------------");
 // Metodo para calcular el punto mas cercano al punto actual.
 var puntos = [unPunto, dosPunto, tresPunto];
 var otroPuntoMas = new punto_1.Punto(3, 4);
 console.log(otroPuntoMas.calcularMasCercano(puntos));
+console.log("-------------");
+// Modificar el fichero para crear un objeto de la clase triangulo e invocar el metodo calcularLongitudLados.
+var puntoA = new punto_1.Punto(2, 3);
+var puntoB = new punto_1.Punto(6, 8);
+var puntoC = new punto_1.Punto(3, 1);
+var trian = new triangulo_1.Triangulo(puntoA, puntoB, puntoC);
+console.log(trian.calcularLongitudLados());
